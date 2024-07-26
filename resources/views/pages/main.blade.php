@@ -9,11 +9,11 @@
                 @foreach($geoItems as $country)
 
                     <div class="cities__column">
-                        <p class="cities__item">{{ $country->title }}</p>
+                        <p class="cities__item cities__item_big">{{ $country->title }}</p>
 
                         <div class="cities__areas">
                             @foreach($country->areas as $area)
-                                <p class="cities__item">{{ $area->title }}</p>
+                                <p class="cities__item cities__item_medium">{{ $area->title }}</p>
 
                                 @if($area->cities->isNotEmpty())
                                     <div class="cities__items">

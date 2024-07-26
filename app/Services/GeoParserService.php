@@ -31,7 +31,7 @@ class GeoParserService
         $citiesRaw = Items::fromFile($link);
 
         foreach ($citiesRaw as $country) {
-            if($country->id == 1001) continue;
+            if($country->name != 'Россия') continue;
 
             $this->countries[$country->id] = $country->name;
 

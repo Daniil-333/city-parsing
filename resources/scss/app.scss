@@ -59,20 +59,27 @@ body {
 
 .cities {
 
-    &__wrap {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1.5rem;
-    }
+    &__wrap {}
 
     &__items {
         display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         justify-items: start;
+        gap: 0 1.5rem;
     }
 
     &__item {
         line-height: 1.4;
         padding: 5px 0;
+
+        &_big {
+            font-weight: 900;
+            font-size: 20px;
+        }
+        &_medium {
+            font-weight: 700;
+            font-size: 18px;
+        }
     }
 
     &__link {
